@@ -12,11 +12,17 @@ body {
   height: 100%;
   width: 100%;
   place-items: center;
-  background: -webkit-linear-gradient(left, #9c9c9c, #9c8f95);
+  background: -webkit-linear-gradient(right, #9c9c9c, #9c8f95);
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
+
 .wrapper {
   overflow: hidden;
-  max-width: 390px;
+  max-width: 400px;
   background: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -119,8 +125,8 @@ input[type="radio"] {
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
-  color: #242424;
-  text-decoration: none;
+  color: #492222;
+  text-decoration-line: none;
 }
 .form-inner form .signup-link {
   text-align: center;
