@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <!--input 타입에 따라 기능이 달라진다.-->
+        <input type="text" placeholder="이름">
+        <input type="email" placeholder="이메일">
+        <input type="password" placeholder="패스워드">
+        <input type="submit" value="회원가입"/>
+        <button>회원가입</button>
+        <!--button타입은 기본행동이 지정되지 않은, 즉 클릭 했을 때 아무런 반응x
+            submit타입은 서버로 form내용을 제출reset타입은 폼의 내용을 모두 초기값으로 되돌림-->
+        <br/>
+        <!--label이라는 태그는 input과 연결을 지어줄 수 있는 태그이다
+            input에 아이디를 지정하고 label에 for에 input의 id을 입력해주면 연결이 되기에 label의 이름을 클릭하면 
+            자동으로 input창을 가리킨다.-->
+        <label for="name">이름</label>
+        <input type="text" id="name" placeholder="이름"/>
+        <br/>
+        <!--radio는 하나밖에 선택을 못하며
+            checkbox는 여러개를 선택할 수 있다.-->
+        <label for="man">남자</label>
+        <input type="radio" id="man" name="gender">
+        <label for="woman">여자</label>
+        <input type="radio" id="woman" name="gender">
+        <br/>
+        <!--action속성은 데이터를 전송할 주소를 지정
+            method속성은 어떤 방식으로 데이터를 서버에 전달할지 작성 그 방식에는 HTTP에 방식을 따르는데 GET방식과POST방식이 있다. 
+            기본적으로 method를 지정안해주면 get방식으로 넘어간다.-->
+        <label for="kor">국어</label>
+        <input type="checkbox" id="kor" name="subject">
+        <label for="eng">영어</label>
+        <input type="checkbox" id="eng" name="subject">
+        <label for="math">수학</label>
+        <input type="checkbox" id="math" name="subject">
+    </form>
+</body>
+</html>
