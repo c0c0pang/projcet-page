@@ -1,0 +1,31 @@
+a {
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+/*
+링크의 상태는 총 다섯가지로 구분
+1.link:기본 상태
+2.active:마우스 클릭 상태
+3.hover:마우스 오버 상태
+4.visited:방문했던 링크
+5.focus:포커스를 가진 상태
+*/
+a:hover {
+  background-color: darkred;
+}
+a:active {
+  background-color: blue;
+}
+
+ul {
+  /*
+리스트의 상태는 총 세가지
+1.list-style-type:리스트의 앞머리 기호 지정
+2.list-style-image:리스트의 앞머리를 이미지로 지정
+3.list-style-position:리스트의 앞머리를 어느위치에 시작할지 지정
+통상적으로 list-style을 많이 쓰기에 위에 3개를 외우기 보단 이거 하나만 외우는게 좋음
+*/
+  list-style-type: none;
+}
