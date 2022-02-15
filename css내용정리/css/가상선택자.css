@@ -1,0 +1,47 @@
+.box {
+  width: 100px;
+  height: 50px;
+  background-color: pink;
+  margin-bottom: 10px;
+}
+
+/*마우스 올렸을 때 반응하는 가상 선택자*/
+.box:hover {
+  background-color: blue;
+}
+
+/*마우스를 클릭했을 때 반응*/
+.box:active {
+  background-color: brown;
+}
+
+/*입력창이 포커스를 받았을 때 반응*/
+input:focus {
+  background-color: aqua;
+}
+nav {
+  padding: 30px;
+}
+
+.childrnen {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: skyblue;
+}
+
+/*
+구조적인 가상 선택자
+사용이유는 각 요소들을 마다 다른 스타일을 지정하기 위해 사용
+*/
+.parent div:first-child,
+.parent div:nth-child(3),
+/*
+nth를 통해 직접 자식요소를 선택 가능 
+더 나아가 nth-child() 괄호안에 even,odd를 넣어주면
+해당 하는 요소들을 선택하게 됨.
+ex)even은 짝수번째 요소들을 선택,odd는 홀수번째 요소들을 선택
+*/
+.parent div:last-child {
+  background-color: bisque;
+}
