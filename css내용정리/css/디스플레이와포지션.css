@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
     display를 지정안하면 기본적으로 
     block형이며 block 각각 한 블록씩 차지한다.
@@ -23,9 +22,6 @@
   display: block;
   margin: auto;
 }
-
-=======
->>>>>>> fe3f0c86bb7de264e3b1fed98bb16eb2f57158d2
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +31,6 @@
 body {
   background-color: antiquewhite;
 }
-<<<<<<< HEAD
 /*
     position의 속성에는 4가지가 있다.
 
@@ -55,8 +50,6 @@ body {
     즉 현재 위치에서 지정된 오프셋 만큼 상대적인 곳에 위치하게 됨.
 
 */
-=======
->>>>>>> fe3f0c86bb7de264e3b1fed98bb16eb2f57158d2
 .menu {
   width: 100%;
   height: 55px;
@@ -82,17 +75,3 @@ body {
   top: 80px;
   left: 0;
 }
-<<<<<<< HEAD
-=======
-.cat,
-.dog,
-.cute {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  border: 1px solid black;
-  background-color: skyblue;
-  display: block;
-  margin: auto;
-}
->>>>>>> fe3f0c86bb7de264e3b1fed98bb16eb2f57158d2
