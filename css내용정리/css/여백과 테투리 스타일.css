@@ -1,0 +1,51 @@
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  /*
+  padding과 margin에 하나의 값만 입력하면 상하좌우 다 해당
+  만약에 두개의 값을 입력하면 첫번째 값은 상하 두번째는 좌우이다.
+  네개의 값을 입력하면 순서대로 위쪽 오른쪽 아래쪽 왼쪽
+  */
+  padding: 20px 10px 30px 20px;
+  margin: 20px;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  /*
+    특정 방향에 여백을 각각 지정할때
+    위쪽 내부 여백만 지정 -top
+    오른쪽 내부 여백만 지정 -right
+    아래 내부 여백만 지정 -bottom
+    왼쪽 내부 여백만 지정-left
+    */
+  padding-top: 100px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+/*
+테투리 속성 크게
+border: 1px solid black
+1번째 인자에는 사이즈값
+2번째 인자에는 테투리 스타일 종류
+3번째 인자에는 컬러 값
+
+border-radius 테두리를 둥글게 만드는 속성이며 
+border와 같이 쓰이며 px,em,% 등의 수치 값으 가짐.
+*/
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border: 10px solid black;
+  margin-bottom: 20px;
+}
+.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border: 10px solid black;
+  border-radius: 10px;
+}
