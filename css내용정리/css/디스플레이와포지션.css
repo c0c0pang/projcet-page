@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+}
+.menu {
+  width: 100%;
+  height: 55px;
+  background-color: aqua;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.content {
+  height: 200vh;
+}
+
+.title {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+.box {
+  width: 100%;
+  height: 55px;
+  background-color: black;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.cat,
+.dog,
+.cute {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: skyblue;
+  display: block;
+  margin: auto;
+}
