@@ -1,0 +1,68 @@
+/*
+flex 레이아웃은 메인축과 교차축을 기준으로 아이템을 정렬
+메인 축: 아이템이 배치된 방향의 축
+교차 축: 메인 축과 수직을 이루는 축
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+flex-dirocton: 아이템을 가로로 배치할건지 세로로 배치할건지 선택 기본적으로 선택을 안하면 row(가로)로 배치가 됨
+row:가로,column:세로
+여기서 거꾸로 배치를 할 거면 row-reverse 와 같이 하이픈과 reverse를 이용
+※
+만약 여기서 flex-dirocton을 가로축을 
+설정하면 메인축은 가로가 되면 교차축은 세로가 된다.
+※
+*/
+.container1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+}
+/*
+flex-wrap: 아이템의 크기가 컨테이너 전체의 크기보다 커질때 줄바꿈을 어떻게 할 것인지 지정하는 속성
+flex-wrap: wrap --> 아이템의 크기가 컨테이너의 전체 크기가 보다 커질 경우 아이템의 순서에 따라 줄바꿈
+여기서 역순으로 배치하고 싶으면 -reverse를 해주면 됨
+*/
+.container2 {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-around;
+}
+/*
+justfy-content: 메인축 방향의 아이템 정렬을 지정하는 속성
+예를들어 center로 지정하면 메인축이 가로인 아이템을  가로방향에서 가운데로 정렬을 해줌
+space-botween:아이템과 아이템사이에만 간격이 생성
+space-around: 아이템의 둘레에 간격이 생성
+*/
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+align-items: 교차축 방향의 아이템을 정렬을 지정하는 속성
+이 속성을 사용하기 위해서는 높이를 꼭 지정해야 한다.
+이 속성은 space의 속성은 사용 못하지만 stretch라는 속성을 사용가능
+컨테이너 높이에 따라 아이템에 축에 따라 쫙 늘어난다.
+기본적으로 align-items는 stretch가 기본값이다.
+*/
+.container4 {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.item {
+  width: 1300px;
+  height: 100px;
+  background-color: pink;
+  font-size: 2cm;
+  text-align: center;
+}

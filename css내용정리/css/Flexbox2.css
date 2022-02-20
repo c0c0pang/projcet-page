@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.item {
+  font-size: 3em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/*
+flex-basis: 이 아이템 속성은 아이템의 기본 크기를 지정
+컨테이너의 메인축을 기준으로 아이템의 크기를 지정할 수 있음
+flex-grow: flex-basis 속성으로 지정된 기본값에서 얼마나 늘어날 수 있는지를 지정하는 속성
+0이상의 값을 가지며 아이템이 아이템이 만약 2개가 있다 가정하고 1로 설정하며 1:1비율로 
+두 아이템이 화면에 늘어나며 아이템이 3개인 경우에서 각각 아이템에 grow값을 각각1,2,3으로 
+설정하게 되면 1:2:3 비율로 화면에 늘어난 상태로 보여진다.
+*/
+
+/*
+flex-shrink: 이 속성은 flex-grow의 반대 개념으로 기본값에서 얼마나 작아질 수 있는지를 
+지정하는 속성이다.
+grow와 마찬가지로 0이상의 값을 가진다.
+기본값은 1이고 1은 작아질 수 있음을 의미 반대로 0은 작아질 수 없음을 의미
+
+즉 grow가 1로 설정이 되어있고 basis이 300px로 설정 되었다고 가정한 다음에 shrink가 
+0이면 300px이하로는 작아지지 않기에 스크롤이나 창화면을 조절하여 
+작아지게 만들면  300px이 고정이 된 상태로 반응하지 않는다.
+*/
+
+/*
+flex: 이 속성은 grow, shrink, basis 속성을 한번에 쓸 수 있게 해주는 단축 속성임
+flex: 1 0 300px --> 순서대로 g,s,b이고 s,b는 생략가능하며 생략시 s는 
+기본값이 1이고 basis는 0이다.
+*/
+.box1 {
+  background-color: #2980b9;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 1;
+}
+.box2 {
+  background-color: #16a085;
+  flex-grow: 2;
+  flex-basis: 0;
+  flex-shrink: 1;
+}
+.box3 {
+  background-color: #8e44ad;
+  flex-grow: 3;
+  flex-basis: 0;
+  flex-shrink: 1;
+}

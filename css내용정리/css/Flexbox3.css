@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  font-size: 3em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100px;
+}
+/*
+align-self: 단일 아이템 자기 자신의 교차축 방향 정렬을 지정하는 속성
+*/
+/*
+order: 아이템에 배치 순서를 지정하는 속성으로 숫자값을 가지게 됨
+*/
+.box1 {
+  background-color: #2980b9;
+  align-self: flex-start;
+  order: 1;
+}
+.box2 {
+  background-color: #16a085;
+  align-self: stretch;
+  order: 3;
+}
+.box3 {
+  background-color: #8e44ad;
+  align-self: flex-end;
+  order: 2;
+}
