@@ -1,0 +1,68 @@
+/*
+  flex는 가로또는 세로 단일 방향 레이아웃을 배치하는데 적합
+  grid는 행과열로 구성된 레이아웃을 배치하는데 적합
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+  grid-template-rows: 행의 크기를 지정
+  grid-template-columns:열의 크기를 지정
+
+  gird-template-columns: 1fr 2fr 3fr
+  로 해주면 그리드를 총 3개의 열로 구성하고 
+  각각의 크기는 1:2:3의 비율로 지정 (fr이 비율로 칼럼을 나눔)
+  rows도 사용 방법은 똑같음
+*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  /*
+    repeat():
+    행과 열의 크기를 동일한 비율만큼 지정할 때 일일이 지정하기 보단 
+    repeat라는 함수를 이용하여 쓰면 간결해진다.
+    사용방법은 repeat(3,1fr) 이런식으로 하면 3개의 행또는 열을 1fr 비율만큼 지정하겠다는 뜻이다
+  */
+  /*
+    minmax:열과 행의 최소 크기와 최대 크기를 지정할 수 있음.
+    쓰는 방법은 repeat(3,minmax(200px,1fr) 이렇게 쓴다면 최소로 작아질 수 있는 크기는 200px이며 최대크기는 비율에 따라 늘어나는   
+  */
+  grid-template-rows: repeat(3, minmax(200px, 1fr));
+}
+.item {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: red;
+}
+.box3 {
+  background-color: salmon;
+}
+.box4 {
+  background-color: black;
+}
+.box5 {
+  background-color: blueviolet;
+}
+.box6 {
+  background-color: coral;
+}
+.box7 {
+  background-color: rosybrown;
+}
+.box8 {
+  background-color: skyblue;
+}
+.box9 {
+  background-color: wheat;
+}
+.box10 {
+  background-color: mediumaquamarine;
+}

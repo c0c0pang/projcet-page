@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.line {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  width: 100vw;
+}
+.box {
+  background-color: black;
+  height: 20px;
+}
+/*
+  fill과 fit의 차이점은 셀을 최대한 많이 배치고 개수가 부족할 때
+*/
+.container1 {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(100px, 1fr));
+  /*
+    auto-fill: 비어있는 셀을 만들어서 그리드를 채움
+  */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  justify-items: center;
+  /*
+    column-gap:열 사이의 간격지정
+    row-gap:행 사이의 간격 지정
+    gap: 열과 행 사이의 간격을 한번에 지정
+  */
+  gap: 10px;
+}
+
+.container2 {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(200px, 1fr));
+  /*
+    auto-fit: 남은 공간에 셀을 늘려서 채움
+  */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /*
+    justify-items : 가로 방향 정렬
+    align-items: 세로 방향 정렬
+    place-items : 단축 속성
+  */
+  align-items: center;
+  /*
+    grid-auto-colums(열): 지정된 열을 벗어나는 셀에 적용할 사이즈를 지정
+    grid-auto-rows(행):지정된 행을 벗어나는 셀에 적용할 사이즈를 지정
+    예를들어 만들어진 행이 4행이라 하고 grid-template-rows:repeat(2,minmax(200px,1fr)이라 했을 때 
+    1,2행만 repeat로 지정이 되며 3,4는 지정이 안되기에 지정이 안된3,4의 행의 사이즈를 지정해주는 속성이다.
+  */
+  grid-auto-rows: 200px;
+}
+.container3 {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(2, 100px);
+  grid-auto-rows: 100px;
+  /*
+    justify-content: 아이템들의 가로 크기의 총합이 컨테이너의 크기보다 작을 경우에 아이템의 정렬을 지정
+    align-content: 아이템들의 세로 크기의 총합이 컨테이너의 크기보다 작을 경우에 아이템의 정렬을 지정
+    단 세로의 경우는 따로 크기를 지정해줘야 정렬을 해준다.ex)height 100vh
+    place-content: 단축속성
+  */
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+.container4 {
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  height: 100vh;
+}
+
+.box_2 {
+  /*
+    gird-column-start : 지정된 그리드 아이템 열의 시작을 지정
+    gird-column-end : 지정된 그리드 아이템 열의 끝을 지정
+    gird-row-start : 지정된 그리드 아이템 행의 시작을 지정
+    gird-row-end : 지정된 그리드 아이템 행의 끝을 지정
+    grid-colimn,grid-row는 각각 start,end의 축약형이다.
+  */
+  background-color: red;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  /*
+    grid-column:2/4과 동일
+  */
+  grid-row-start: 1;
+  grid-row-end: 3;
+  /*
+    grid-row:1/3과 동일
+  */
+}
+
+.item {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+.box1 {
+  background-color: aqua;
+}
+
+.box2 {
+  background-color: red;
+}
+.box3 {
+  background-color: salmon;
+}
+.box4 {
+  background-color: black;
+}
+.box5 {
+  background-color: blueviolet;
+}
+.box6 {
+  background-color: coral;
+}
+.box7 {
+  background-color: rosybrown;
+}
+.box8 {
+  background-color: skyblue;
+}
+.box9 {
+  background-color: wheat;
+}
+.box10 {
+  background-color: mediumaquamarine;
+}
